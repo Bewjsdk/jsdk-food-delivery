@@ -63,6 +63,13 @@
     padding: 1vw 2.3vw;
     font-size: clamp(0.85rem, 1vw, 1vw);
     border-radius: 3rem;
+    transition: all 0.3s;
+
+    /* Button when mouse over */
+    &:hover {
+      background: var(--main-color);
+      color: var(--white-color);
+    }
   }
 }
 
