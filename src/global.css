@@ -8,9 +8,10 @@
 }
 
 :root {
-  --main-color: #1b3fe2;
+  --main-color: #e21b1b;
   --text-color: #333333;
   --noti-color: #e21b4d;
+  --white-color: #ffffff;
 
   font-family: "Outfit", sans-serif;
   font-weight: 400;
@@ -40,3 +41,4 @@ button {
 :focus-visible {
   outline: 2px solid var(--main-color);
 }
+

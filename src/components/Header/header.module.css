@@ -1,0 +1,73 @@
+/* Header section */
+.header {
+  min-height: 36vw;
+  margin-block: 2rem;
+  margin-inline: auto;
+  background: 
+    url('/header-food-img.png'), 
+    url('/header-food-img2.png'), 
+    var(--main-color);
+  background-size: 60%, 40%;
+  background-repeat: no-repeat;
+  background-position: 
+    80% 0, 
+    10% 0; 
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  /* Header overlay */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.514));
+    z-index: 10;
+  }
+}
+
+/* Header Content */
+.headerContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 20;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 2.5s;
+
+  /* Header Topic */
+  & > h1 {
+    font-weight: 500;
+    color: var(--white-color);
+    font-size: clamp(1.2rem, 4.5vw, 4.5vw);
+  }
+
+  /* Header description */
+  & > p {
+    color: var(--white-color);
+    font-size: 1.3vw;
+  }
+
+  /* Header button */
+  & > button {
+    color: var(--text-color);
+    font-weight: 500;
+    background-color: var(--white-color);
+    padding: 1vw 2.3vw;
+    font-size: clamp(0.85rem, 1vw, 1vw);
+    border-radius: 3rem;
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
