@@ -1,0 +1,102 @@
+.navbar {
+  padding-block: 1.5rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  & > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--main-color);
+    & > span {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+/* Navbar menu */
+.navMenu {
+  display: flex;
+  gap: 1.5rem;
+
+  /* Menu lists */
+  & li {
+    position: relative;
+
+    /* Bottom line for active */
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15%;
+      left: 0;
+      right: 0;
+
+      width: 0;
+      height: 2px;
+      margin-inline: auto;
+
+      background-color: var(--main-color);
+      transition: all 0.3s;
+    }
+
+    /* Current menu active */
+    &.active::after {
+      width: 100%;
+    }
+  }
+  
+  /* List menu button */
+  & button {
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: 1.125rem;
+  }
+}
+
+/* Navbar right side */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+
+  /* All buttons */
+  & > button {
+    color: var(--text-color);
+  }
+
+  /* Sign in button */
+  & > button:last-of-type {
+    border: 1px solid var(--main-color);
+    border-radius: 2.5rem;
+    padding: 0.75rem 2rem;
+    transition: 0.3s;
+
+    /* Sign in button (mouse over)*/
+    &:hover {
+      background-color: var(--main-color);
+      color: whitesmoke;
+    }
+  }
+
+  /* Basket button */
+  & > .basket {
+    position: relative;
+
+    /* Basket Notification */
+    & > .basketNoti {
+      position: absolute;
+      min-width: 0.75rem;
+      min-height: 0.75rem;
+      background: var(--noti-color);
+      border-radius: 50%;
+      top: -20%;
+      right: -20%;
+    }
+  }
+}
