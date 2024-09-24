@@ -1,0 +1,56 @@
+.exploreMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--text-color);
+
+  /* Explore menu title */
+  & > h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+
+  /* Explore menu description */
+  & > .exploreMenuText {
+    max-width: 60%;
+  }
+
+  /* Explore menu lists */
+  & > .exploreMenuLists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-block: 1.2rem;
+    overflow-x: scroll;
+
+    /* Hide scrollbar */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Menu list items */
+    & > .exploreMenuListItems {
+      cursor: pointer;
+    }
+
+    /* Menu list items image */
+    & > .exploreMenuListItems img {
+      transition: 0.5s;
+    }
+
+    /* Menu list items text */
+    & > .exploreMenuListItems p {
+      margin-block-start: 10px;
+      font-size: clamp(1rem, 1vw, 1.2vw);
+    }
+  }
+
+  & > hr {
+    margin-block: 0.5rem;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+  }
+}
