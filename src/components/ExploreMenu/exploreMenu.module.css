@@ -19,11 +19,14 @@
   & > .exploreMenuLists {
     display: flex;
     justify-content: space-between;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
     align-items: center;
     gap: 2rem;
     text-align: center;
     margin-block: 1.2rem;
     overflow-x: scroll;
+    overflow-y: visible;
 
     /* Hide scrollbar */
     &::-webkit-scrollbar {
@@ -37,12 +40,12 @@
 
     /* Menu list items image */
     & > .exploreMenuListItems img {
-      transition: 0.5s;
+      transition: 0.2s;
     }
 
     /* Menu list items text */
     & > .exploreMenuListItems p {
-      margin-block-start: 10px;
+      margin-block-start: 0.5rem;
       font-size: clamp(1rem, 1vw, 1.2vw);
     }
   }

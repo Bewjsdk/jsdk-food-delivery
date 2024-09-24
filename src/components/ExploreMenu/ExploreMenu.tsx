@@ -1,7 +1,21 @@
+import { Dispatch, SetStateAction } from "react";
 import { menuLists } from "../../constants";
 import styles from "./exploreMenu.module.css";
+import { FoodType } from "../../interfaces";
 
-const ExploreMenu = () => {
+interface ExploreMenuProps {
+  category: FoodType;
+  setCategory: Dispatch<SetStateAction<FoodType>>;
+ }
+
+const ExploreMenu = ({ category, setCategory }: ExploreMenuProps) => {
+  
+  // Handle selected category
+  const handleSelected = (currentCategory: FoodType) => {
+    setCategory(prev => prev === currentCategory ? "All" : currentCategory);
+  }
+
+  console.log(category);
 
   return (
     <div className={styles.exploreMenu} id="explore-menu">
@@ -19,9 +33,17 @@ const ExploreMenu = () => {
       <div className={styles.exploreMenuLists}>
         {/* Each menu list */}
         {menuLists.map(menu => (
-          <div key={menu.id} className={styles.exploreMenuListItems}>
+          <div 
+            key={menu.id} 
+            className={styles.exploreMenuListItems}
+            onClick={() => handleSelected(menu.type as FoodType)}
+          >
             {/* Menu icon */}
-            <img src={menu.icon} alt={`${menu.type} icon`} className="icon"/>
+            <img 
+              src={menu.icon} 
+              alt={`${menu.type} icon`} 
+              className={`icon ${category === menu.type ? "active" : ""}`}
+            />
             <p>{menu.type}</p>
           </div>
         ))}
