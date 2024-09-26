@@ -9,6 +9,7 @@
 
 :root {
   --main-color: #e21b1b;
+  --green-color: #2be21b;
   --text-color: #333333;
   --noti-color: #e21b4d;
   --white-color: #ffffff;
@@ -36,6 +37,10 @@ button {
   border: none;
   cursor: pointer;
   font-size: inherit;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* Menu icon default */

@@ -12,10 +12,15 @@ export type FoodType =
   export type FoodTypeNotAll = Exclude<FoodType, "All">
 
   export type FoodListType = {
-    id: number;
-    name: string;
-    image: string;
-    price: number;
-    description: string;
-    category: FoodTypeNotAll[];
+    id: number,
+    name: string,
+    image: string,
+    price: number,
+    ratings: number,
+    description: string,
+    category: FoodTypeNotAll[]
   }
+
+  export type StoreContextType = {
+    foodLists: FoodListType[];
+  };

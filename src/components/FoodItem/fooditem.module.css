@@ -1,0 +1,107 @@
+.foodItem {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.75rem #00000015;
+  transition: 0.3s;
+  overflow: hidden;
+  animation: fadeIn 1s;
+
+  /* Image Container */
+  & > .foodItemImage {
+    position: relative;
+
+    /* Image */
+    & > img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    /* First add button */
+    & > .btnFirstAdd {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 0.75rem;
+      padding: 0.5rem;
+      border-radius: 50%;
+      display: inline-flex;
+      background: var(--white-color);
+    }
+
+    /* Item Count Container */
+    & > .itemCountContainer {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 0.75rem;
+      padding: 0.25rem;
+      border-radius: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--white-color);
+
+      /* All buttons inside */
+      & > button {
+        padding: 0.5rem;
+        border-radius: 50%;
+        display: inline-flex;
+        background-color: aliceblue;
+
+        /* Add button */
+        &.addBtn {
+          background: var(--green-color);
+          color: var(--white-color);
+        }
+
+        /* Remove button */
+        &.removeBtn {
+          background: var(--main-color);
+          color: var(--white-color);
+        }
+      }
+    }
+  }
+
+  /* Food Item Information */
+  & > .foodItemInfo {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    /* Name & Rating */
+    & > .nameRating {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      /* Name */
+      & > p {
+        font-size: 1.12rem;
+        font-weight: 500;
+      }
+    }
+
+    /* Description */
+    & > .foodDesc {
+      color: var(--text-color);
+      font-size: 0.75rem;
+    }
+
+    /* Price */
+    & > .foodPrice {
+      color: var(--main-color);
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

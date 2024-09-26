@@ -96,6 +96,7 @@ export const foodLists: FoodListType[] = [
     name: "Cheese Burger",
     image: fastFoodImages.fastfood1,
     price: 99,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Fast Food"]
   },
@@ -104,6 +105,7 @@ export const foodLists: FoodListType[] = [
     name: "Chicken Burger",
     image: fastFoodImages.fastfood2,
     price: 79,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Fast Food"]
   },
@@ -112,6 +114,7 @@ export const foodLists: FoodListType[] = [
     name: "French Fries",
     image: fastFoodImages.fastfood3,
     price: 59,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Fast Food"]
   },
@@ -120,6 +123,7 @@ export const foodLists: FoodListType[] = [
     name: "Chicken Nuggets", 
     image: fastFoodImages.fastfood4,
     price: 69,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Fast Food"]
   },
@@ -128,6 +132,7 @@ export const foodLists: FoodListType[] = [
     name: "Taco",
     image: fastFoodImages.fastfood5,
     price: 59,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Fast Food"]
   },
@@ -136,6 +141,7 @@ export const foodLists: FoodListType[] = [
     name: "Iced tea",
     image: drinkImages.drink1,
     price: 49,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Drinks"]
   },
@@ -144,6 +150,7 @@ export const foodLists: FoodListType[] = [
     name: "Coca Cola",
     image: drinkImages.drink2,
     price: 30,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Drinks"]
   },
@@ -152,6 +159,7 @@ export const foodLists: FoodListType[] = [
     name: "Strawberry Milkshake",
     image: drinkImages.drink3,
     price: 79,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Drinks"]
   },
@@ -160,6 +168,7 @@ export const foodLists: FoodListType[] = [
     name: "Lemonade",
     image: drinkImages.drink4,
     price: 89,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Drinks"]
   },
@@ -168,6 +177,7 @@ export const foodLists: FoodListType[] = [
     name: "Coffee",
     image: drinkImages.drink5,
     price: 79,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Drinks"]
   },
@@ -176,6 +186,7 @@ export const foodLists: FoodListType[] = [
     name: "Chocolate Cake",
     image: dessertImages.dessert1,
     price: 129,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Desserts"]
   },
@@ -184,6 +195,7 @@ export const foodLists: FoodListType[] = [
     name: "Blueberry Pies",
     image: dessertImages.dessert2,
     price: 149,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Desserts"]
   },
@@ -192,6 +204,7 @@ export const foodLists: FoodListType[] = [
     name: "Ice Cream",
     image: dessertImages.dessert3,
     price: 59,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Desserts"]
   },
@@ -200,6 +213,7 @@ export const foodLists: FoodListType[] = [
     name: "Cookies",
     image: dessertImages.dessert4,
     price: 49,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Desserts"]
   },
@@ -208,6 +222,7 @@ export const foodLists: FoodListType[] = [
     name: "Pastries",
     image: dessertImages.dessert5,
     price: 109,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Desserts"]
   },
@@ -216,30 +231,34 @@ export const foodLists: FoodListType[] = [
     name: "Ramen",
     image: noodlesImages.noodles1,
     price: 89,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Noodles"]
   },
   {
     id: 17,
     name: "Spaghetti",
-    image: noodlesImages.noodles1,
+    image: noodlesImages.noodles2,
     price: 79,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Noodles"]
   },
   {
     id: 18,
     name: "Udon",
-    image: noodlesImages.noodles1,
+    image: noodlesImages.noodles3,
     price: 59,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Noodles"]
   },
   {
     id: 19,
     name: "Pad Thai",
-    image: noodlesImages.noodles1,
+    image: noodlesImages.noodles4,
     price: 39,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Noodles", "Thai Food"]
   },
@@ -248,6 +267,7 @@ export const foodLists: FoodListType[] = [
     name: "Sour Soup",
     image: thaifoodImages.thaifood1,
     price: 120,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Thai Food"]
   },
@@ -256,6 +276,7 @@ export const foodLists: FoodListType[] = [
     name: "Shrimp Fried Rice",
     image: thaifoodImages.thaifood2,
     price: 80,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Thai Food"]
   },
@@ -264,6 +285,7 @@ export const foodLists: FoodListType[] = [
     name: "Rice topped Stir-fried Seafood and Basil + fried egg",
     image: thaifoodImages.thaifood3,
     price: 130,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Thai Food", "Sea Food"]
   },
@@ -272,6 +294,7 @@ export const foodLists: FoodListType[] = [
     name: "Somtum seafood",
     image: thaifoodImages.thaifood4,
     price: 120,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Thai Food", "Sea Food"]
   },
@@ -280,6 +303,7 @@ export const foodLists: FoodListType[] = [
     name: "Somtum with crab and fermented fish",
     image: thaifoodImages.thaifood5,
     price: 50,
+    ratings: 5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Thai Food"]
   },
@@ -288,6 +312,7 @@ export const foodLists: FoodListType[] = [
     name: "Grilled Salmon",
     image: seafoodImages.seafood1,
     price: 150,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Sea Food"]
   },
@@ -296,6 +321,7 @@ export const foodLists: FoodListType[] = [
     name: "Baked Shrimp",
     image: seafoodImages.seafood2,
     price: 180,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Sea Food"]
   },
@@ -304,6 +330,7 @@ export const foodLists: FoodListType[] = [
     name: "Lobsters",
     image: seafoodImages.seafood3,
     price: 599,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Sea Food"]
   },
@@ -312,6 +339,7 @@ export const foodLists: FoodListType[] = [
     name: "Crabs",
     image: seafoodImages.seafood4,
     price: 399,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Sea Food"]
   },
@@ -320,6 +348,7 @@ export const foodLists: FoodListType[] = [
     name: "Salad 1",
     image: saladImages.salad1,
     price: 109,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Salad"]
   },
@@ -328,6 +357,7 @@ export const foodLists: FoodListType[] = [
     name: "Salad 2",
     image: saladImages.salad2,
     price: 99,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Salad"]
   },
@@ -336,6 +366,7 @@ export const foodLists: FoodListType[] = [
     name: "Salad 3",
     image: saladImages.salad3,
     price: 109,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Salad"]
   },
@@ -344,6 +375,7 @@ export const foodLists: FoodListType[] = [
     name: "Sandwich 1",
     image: sandwichIamges.sandwich1,
     price: 119,
+    ratings: 4,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Sandwich"]
   },
@@ -352,6 +384,7 @@ export const foodLists: FoodListType[] = [
     name: "Sandwich 2",
     image: sandwichIamges.sandwich2,
     price: 129,
+    ratings: 4.5,
     description: "lorem ipsum dolor sit amet dolor sit amet",
     category: ["Sandwich"]
   }
