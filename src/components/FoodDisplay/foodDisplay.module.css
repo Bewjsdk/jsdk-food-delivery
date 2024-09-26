@@ -1,0 +1,17 @@
+.foodDisplay {
+  margin-block-start: 2rem;
+
+  /* Title */
+  & > h2 {
+    font-size: clamp(1.5rem, 2vw, 2vw);
+    font-weight: 600;
+  }
+
+  /* Food Display Lists */
+  & > .foodDisplayList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    margin-block-start: 2rem;
+    gap: 2rem;
+  } 
+}
