@@ -15,8 +15,6 @@ const ExploreMenu = ({ category, setCategory }: ExploreMenuProps) => {
     setCategory(prev => prev === currentCategory ? "All" : currentCategory);
   }
 
-  console.log(category);
-
   return (
     <div className={styles.exploreMenu} id="explore-menu">
       {/* Explore menu topic */}

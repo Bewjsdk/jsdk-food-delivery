@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export type FoodType =
   | "Fast Food"
   | "Noodles"
@@ -22,5 +24,13 @@ export type FoodType =
   }
 
   export type StoreContextType = {
-    foodLists: FoodListType[];
+    foodLists: FoodListType[],
+    cartItems: {
+      [key: number]: number;
+    },
+    setCartItems: Dispatch<SetStateAction<{
+      [key: number]: number;
+    }>>,
+    addToCart: (itemId: number) => void,
+    removeFromCart: (itemId: number) => void,
   };

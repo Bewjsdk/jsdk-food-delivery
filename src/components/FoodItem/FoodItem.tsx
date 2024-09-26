@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FoodListType } from "../../interfaces";
 import Ratings from "../Ratings/Ratings";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
 
 import styles from "./fooditem.module.css";
+import { StoreContext } from "../../context/StoreContext";
 
 interface FoodItemProps {
   foodData: FoodListType;
@@ -11,19 +12,23 @@ interface FoodItemProps {
 
 const FoodItem = ({ foodData }: FoodItemProps) => {
   // Food item properties
-  const { name, image, price, description, category, ratings } = foodData;
+  const { id, name, image, price, description, category, ratings } = foodData;
 
   // Add item to cart state
-  const [itemCount, setItemCount] = useState(0);
+  const storeContext = useContext(StoreContext);
+
+  if (!storeContext) return <div>Loading...</div>
+
+  const {cartItems, addToCart, removeFromCart} = storeContext;
 
   // Add item to cart
   const addItem = () => {
-    setItemCount((prev) => prev + 1);
+    addToCart(id)
   };
 
   // Remove item on cart
   const removeItem = () => {
-    setItemCount((prev) => prev - 1);
+    removeFromCart(id)
   };
 
   return (
@@ -33,7 +38,7 @@ const FoodItem = ({ foodData }: FoodItemProps) => {
         <img src={image} alt={`Picture of ${name}`} />
         {
           // Item = 0
-          !itemCount ? (
+          !cartItems[id] ? (
             <button className={styles.btnFirstAdd} onClick={addItem}>
               <IoMdAdd fontSize={20} />
             </button>
@@ -45,7 +50,7 @@ const FoodItem = ({ foodData }: FoodItemProps) => {
                 <IoMdRemove fontSize={20} />
               </button>
               {/* Show Item Count */}
-              <p>{itemCount}</p>
+              <p>{cartItems[id]}</p>
 
               {/* Add Button */}
               <button onClick={addItem} className={styles.addBtn}>

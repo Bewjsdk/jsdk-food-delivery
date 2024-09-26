@@ -15,6 +15,8 @@ const FoodDisplay = ({ category }: FoodDisplayProps) => {
   if(!context) return <div>Loading...</div>
 
   const { foodLists } = context;
+
+  console.log(category)
   
   return (
     <section className={styles.foodDisplay} id="foodDisplay">
@@ -22,10 +24,12 @@ const FoodDisplay = ({ category }: FoodDisplayProps) => {
       {/* Food Lists */}
       <div className={styles.foodDisplayList}>
         {foodLists.map(item => (
+          category === "All" || item.category.includes(category) ?
           <FoodItem 
             key={item.id}
             foodData={item}
           />
+          : ""
         ))}
       </div>
     </section>
