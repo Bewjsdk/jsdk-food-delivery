@@ -1,5 +1,5 @@
 import styles from "./ratings.module.css";
-import { FaStar, FaStarHalf } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const Ratings = ({ score }: { score: number }) => {
   // Stars
@@ -20,7 +20,7 @@ const Ratings = ({ score }: { score: number }) => {
       {stars.map((_, index) => (
         <FaStar key={index} />
       ))}
-      <FaStarHalf />
+      <FaStarHalfAlt />
     </div>
   );
 };
