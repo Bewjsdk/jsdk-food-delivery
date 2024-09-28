@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styles from "./navbar.module.css";
-import { IoFastFood, IoSearch, IoBasket } from "react-icons/io5";
+import { IoSearch, IoBasket } from "react-icons/io5";
 import { navbarMenu } from "../../constants";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   // Current menu path
@@ -9,15 +10,8 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}> 
-      {/* Food delivery Logo */}
-      <div className={styles.logo}>
-        <a href="#">
-          <span>
-            <IoFastFood size={40} />
-          </span>
-          <span>JSDKFOOD</span>
-        </a>
-      </div>
+      {/* Website Logo */}
+      <Logo />
 
       {/* Navbar Menu */}
       <ul className={styles.navMenu}>

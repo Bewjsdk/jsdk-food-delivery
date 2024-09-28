@@ -1,0 +1,62 @@
+.footer {
+  color: var(--footer-text-color);
+  background: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline: 8vw;
+  padding-block-end: 1.25rem;
+  padding-block-start: 5rem;
+  margin-block-start: 6.25rem;
+
+  /* Footer content */
+  & > .footerContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 5rem;
+
+    /* Left, right and center content */
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+      
+      /* All lists inside */
+      & li {
+        margin-block-end: 0.75rem;
+        cursor: pointer;
+      }
+
+      /* All h2 titles */
+      & > h2 {
+        color: var(--white-color);
+      }
+    }
+
+    /* Left content */
+    & > .leftContent {
+      
+      /* Social icon lists */
+      & > .socialIcons {
+        display: flex;
+        gap: 1.25rem;
+        /* Icons */
+        & a {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  /* Line */
+  & > hr {
+    width: 100%;
+    height: 2px;
+    margin-block: 1.25rem;
+    background: grey;
+    border: none;
+  }
+}
