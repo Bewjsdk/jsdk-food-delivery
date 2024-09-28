@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import styles from "./home.module.css";
 import { FoodType } from "../../interfaces";
 import FoodDisplay from "../../components/FoodDisplay/FoodDisplay";
+import AppDownload from "../../components/AppDownload/AppDownload";
 
 const Home = () => {
   // Category state
@@ -13,8 +14,8 @@ const Home = () => {
     <div className={styles.home}>
       <Header />
       <ExploreMenu category={category} setCategory={setCategory} />
-
       <FoodDisplay category={category} />
+      <AppDownload />
     </div>
   )
 }

@@ -1,0 +1,28 @@
+.appDownload {
+  margin: auto;
+  margin-block-start: 100px;
+  font-size: clamp(20px, 3vw, 3vw);
+  text-align: center;
+  font-weight: 500;
+
+  /* Platforms */
+  .platformsDownload {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-block-start: 40px;
+
+    & > img {
+      display: inline-block;
+      width: max(30vw, 120px);
+      max-width: 180px;
+      transition: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
