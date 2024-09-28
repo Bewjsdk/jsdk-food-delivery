@@ -12,3 +12,13 @@
     }
   }
 }
+
+/* Responsive */
+/* screen < 1150px */
+@media (max-width: 1150px) {
+  .logo {
+    & > a > span {
+      font-size: 1.5rem;
+    }
+  }
+}

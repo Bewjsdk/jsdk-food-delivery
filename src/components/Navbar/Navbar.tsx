@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className={styles.basketNoti}></div>
         </button>
         {/* Sign in */}
-        <button>Sign in</button>
+        <button className={styles.signIn}>Sign in</button>
       </div>
     </nav>
   )

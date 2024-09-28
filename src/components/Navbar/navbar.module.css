@@ -56,7 +56,7 @@
   }
 
   /* Sign in button */
-  & > button:last-of-type {
+  & > .signIn {
     border: 1px solid var(--main-color);
     border-radius: 2.5rem;
     padding: 0.75rem 2rem;
@@ -83,5 +83,29 @@
       top: -20%;
       right: -20%;
     }
+  }
+}
+
+/* Responsive */
+/* screen < 1150px */
+@media (max-width: 1150px) {
+  /* Navbar right */
+ .navRight {
+  gap: 1.5rem;
+
+  & > button > svg {
+    width: 1.5rem;
+  }
+
+  & > .signIn {
+    padding: 0.5rem 1.5rem;
+  }
+ }
+}
+
+/* screen < 870px */
+@media (max-width: 870px) {
+  .navMenu {
+    display: none;
   }
 }
