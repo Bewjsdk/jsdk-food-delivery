@@ -1,11 +1,15 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import { IoSearch, IoBasket } from "react-icons/io5";
 import { navbarMenu } from "../../constants";
 import Logo from "../Logo/Logo";
 import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+interface NavbarProps {
+  setShowLogin: Dispatch<SetStateAction<boolean>>;
+}
+
+const Navbar = ({ setShowLogin }: NavbarProps) => {
   // Current menu path
   const [menuPath, setMenuPath] = useState("home");
 
@@ -19,7 +23,7 @@ const Navbar = () => {
       
       if(!element) return;
 
-      element.scrollIntoView({behavior: "smooth"});
+      element.scrollIntoView();
     }
   }, [hash]);  
 
@@ -53,7 +57,12 @@ const Navbar = () => {
           <div className={styles.basketNoti}></div>
         </button>
         {/* Sign in */}
-        <button className={styles.signIn}>Sign in</button>
+        <button 
+          className={styles.signIn}
+          onClick={() => setShowLogin(true)}
+        >
+          Sign in
+        </button>
       </div>
     </nav>
   )
