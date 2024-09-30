@@ -1,28 +1,35 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import styles from "./navbar.module.css";
+import { Link, useLocation } from "react-router-dom";
 import { IoSearch, IoBasket } from "react-icons/io5";
+
 import { navbarMenu } from "../../constants";
 import Logo from "../Logo/Logo";
-import { Link, useLocation } from "react-router-dom";
 
+import styles from "./navbar.module.css";
+
+// Navbar component props interface
 interface NavbarProps {
   setShowLogin: Dispatch<SetStateAction<boolean>>;
 }
 
+// Navbar component
 const Navbar = ({ setShowLogin }: NavbarProps) => {
   // Current menu path
   const [menuPath, setMenuPath] = useState("home");
 
   // Location with hash
-  const {hash} = useLocation();
+  const { hash } = useLocation();
 
-  // When id bookmark change
+  // When url location changed
   useEffect(() => {
+    // scroll to #id section if exist
     if(hash) {
       const element = document.querySelector(hash);
       
+      // Not found not scroll
       if(!element) return;
 
+      // Found scroll to that element
       element.scrollIntoView();
     }
   }, [hash]);  
@@ -31,7 +38,6 @@ const Navbar = ({ setShowLogin }: NavbarProps) => {
     <nav className={styles.navbar}> 
       {/* Website Logo */}
       <Logo />
-
       {/* Navbar Menu */}
       <ul className={styles.navMenu}>
         {/* Menu lists */}
@@ -40,7 +46,12 @@ const Navbar = ({ setShowLogin }: NavbarProps) => {
             key={menu.label}
             className={menu.label === menuPath ? styles.active : ""}
           >
-            <Link to={menu.path} onClick={() => setMenuPath(menu.label)}>{menu.label}</Link>
+            <Link 
+              to={menu.path} 
+              onClick={() => setMenuPath(menu.label)}
+            >
+              {menu.label}
+            </Link>
           </li>
         ))}
       </ul>
