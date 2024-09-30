@@ -19,6 +19,7 @@ const LoginPopup = ({ setShowLogin }: LoginPopupProps) => {
           <h2>{currentState}</h2>
           <button onClick={() => setShowLogin(false)}>X</button>
         </div>
+
         {/* Form inputs */}
         <div className={styles.loginInputs}>
           {currentState === "Sign Up" ? (
@@ -29,22 +30,28 @@ const LoginPopup = ({ setShowLogin }: LoginPopupProps) => {
           <input type="email" placeholder="Email" required />
           <input type="password" placeholder="Password" required />
         </div>
-        <button>
+
+        {/* Button for Create account or login */}
+        <button type="button" className={styles.submitBtn}>
           {currentState === "Sign Up" ? "Create account" : "Login"}
         </button>
-        <div className="">
+
+        {/* Agree condition check */}
+        <div className={styles.conditionCheck}>
           <input type="checkbox" required />
           <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
+        
+        {/* Switch to Sign Up or Login */}
         {currentState === "Sign Up" ? (
           <p>
             Alreay have an account? 
-            <button onClick={() => setCurrentState("Login")}>Login</button>
+            <button type="button" onClick={() => setCurrentState("Login")}>Login</button>
           </p>
         ) : (
           <p>
             Create a new account? 
-            <button onClick={() => setCurrentState("Sign Up")}>Click here</button>
+            <button type="button" onClick={() => setCurrentState("Sign Up")}>Click here</button>
           </p>
         )}
       </form>
