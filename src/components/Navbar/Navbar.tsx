@@ -1,12 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import { IoSearch, IoBasket } from "react-icons/io5";
 import { navbarMenu } from "../../constants";
 import Logo from "../Logo/Logo";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   // Current menu path
   const [menuPath, setMenuPath] = useState("home");
+
+  // Location with hash
+  const {hash} = useLocation();
+
+  // When id bookmark change
+  useEffect(() => {
+    if(hash) {
+      const element = document.querySelector(hash);
+      
+      if(!element) return;
+
+      element.scrollIntoView({behavior: "smooth"});
+    }
+  }, [hash]);  
 
   return (
     <nav className={styles.navbar}> 
@@ -21,7 +36,7 @@ const Navbar = () => {
             key={menu.label}
             className={menu.label === menuPath ? styles.active : ""}
           >
-            <button onClick={() => setMenuPath(menu.label)}>{menu.label}</button>
+            <Link to={menu.path} onClick={() => setMenuPath(menu.label)}>{menu.label}</Link>
           </li>
         ))}
       </ul>

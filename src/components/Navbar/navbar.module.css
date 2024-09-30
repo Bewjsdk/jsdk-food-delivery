@@ -37,7 +37,7 @@
   }
   
   /* List menu button */
-  & button {
+  & a {
     text-transform: capitalize;
     color: var(--text-color);
     font-size: 1.125rem;

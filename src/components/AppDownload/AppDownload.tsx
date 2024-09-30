@@ -4,7 +4,7 @@ import googlePlay from "/googleplay.png";
 
 const AppDownload = () => {
   return (
-    <div className={styles.appDownload} id="appDownload">
+    <div className={styles.appDownload} id="app-download">
       <p>
         For Better Experience Download <br /> JSDKFOOD
       </p>

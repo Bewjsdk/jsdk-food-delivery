@@ -33,15 +33,15 @@ export const navbarMenu = [
   },
   {
     label: 'menu',
-    path: '/menu',
+    path: '#explore-menu',
   },
   {
     label:'mobile-app',
-    path: '/mobile-app',
+    path: '#app-download',
   },
   {
     label: 'contact us',
-    path: '/contact-us',
+    path: '#footer',
   }
 ];
 
