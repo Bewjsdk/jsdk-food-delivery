@@ -83,20 +83,20 @@
 /* screen < 1150px */
 @media (max-width: 1150px) {
   .headerContent {
-    max-width: 45%;
+    max-width: 50%;
   }
 }
 
 /* screen < 870px */
 @media (max-width: 870px) {
   .headerContent {
-    max-width: 65%;
+    max-width: 55%;
     & > p {
       display: none;
     }
 
     & > button {
-      padding: 2vw 4vw;
+      padding: 1vw 2vw;
     }
   }
 }
