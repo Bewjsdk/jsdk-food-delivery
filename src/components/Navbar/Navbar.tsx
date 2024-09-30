@@ -9,11 +9,12 @@ import styles from "./navbar.module.css";
 
 // Navbar component props interface
 interface NavbarProps {
+  showLogin: boolean;
   setShowLogin: Dispatch<SetStateAction<boolean>>;
 }
 
 // Navbar component
-const Navbar = ({ setShowLogin }: NavbarProps) => {
+const Navbar = ({ setShowLogin, showLogin }: NavbarProps) => {
   // Current menu path
   const [menuPath, setMenuPath] = useState("home");
 
@@ -69,7 +70,7 @@ const Navbar = ({ setShowLogin }: NavbarProps) => {
         </button>
         {/* Sign in */}
         <button 
-          className={styles.signIn}
+          className={`${styles.signIn} ${showLogin && styles.active}`}
           onClick={() => setShowLogin(true)}
         >
           Sign in

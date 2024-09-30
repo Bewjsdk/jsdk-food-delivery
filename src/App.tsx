@@ -22,7 +22,7 @@ const App = () => {
       {/* Main app */}
       <div className={styles.app}>
         {/* Navbar */}
-        <Navbar setShowLogin={setShowLogin}/>
+        <Navbar setShowLogin={setShowLogin} showLogin={showLogin}/>
         {/* Home page */}
         <Home />
       </div>
