@@ -60,3 +60,16 @@
     border: none;
   }
 }
+
+/* Responsive */
+/* screen < 768px */
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 2.5rem !important; 
+  }
+
+  .footerCopyright {
+    text-align: center;
+  }
+}
