@@ -57,3 +57,10 @@
     border: none;
   }
 }
+
+/* Responsive */
+@media (max-width: 1150px) {
+  .exploreMenuText {
+    max-width: 100% !important;
+  }
+}
