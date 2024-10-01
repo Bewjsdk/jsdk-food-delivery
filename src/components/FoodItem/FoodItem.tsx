@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FoodListType } from "../../interfaces";
 import Ratings from "../Ratings/Ratings";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
@@ -12,7 +12,7 @@ interface FoodItemProps {
 
 const FoodItem = ({ foodData }: FoodItemProps) => {
   // Food item properties
-  const { id, name, image, price, description, category, ratings } = foodData;
+  const { id, name, image, price, description, ratings } = foodData;
 
   // Add item to cart state
   const storeContext = useContext(StoreContext);
