@@ -1,0 +1,65 @@
+.placeOrder {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-block-start: 100px;
+}
+
+.placeOrderLeft {
+  width: 100%;
+  max-width: max(30%, 500px);
+
+  & .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-block-end: 50px;
+  }
+
+  & input {
+    margin-block-end: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: var(--main-color);
+  }
+
+  & .multiFields {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.placeOrderRight {
+  width: 100%;
+  max-width: max(40%, 500px);
+}
+
+
+
+.cartTotal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & hr {
+    margin-block: 10px;
+  }
+
+  & button {
+    color: white;
+    background-color: var(--main-color);
+    width: max(15vw, 200px);
+    padding-block: 12px;
+    border-radius: 4px;
+    margin-block-start: 15px;
+  }
+}
+
+.cartTotalDetails {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+}

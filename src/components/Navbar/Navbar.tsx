@@ -1,4 +1,10 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoSearch, IoBasket } from "react-icons/io5";
 
@@ -6,6 +12,7 @@ import { navbarMenu } from "../../constants";
 import Logo from "../Logo/Logo";
 
 import styles from "./navbar.module.css";
+import { StoreContext } from "../../context/StoreContext";
 
 // Navbar component props interface
 interface NavbarProps {
@@ -21,36 +28,37 @@ const Navbar = ({ setShowLogin, showLogin }: NavbarProps) => {
   // Location with hash
   const { hash } = useLocation();
 
+  const context = useContext(StoreContext);
   // When url location changed
   useEffect(() => {
     // scroll to #id section if exist
-    if(hash) {
+    if (hash) {
       const element = document.querySelector(hash);
-      
+
       // Not found not scroll
-      if(!element) return;
+      if (!element) return;
 
       // Found scroll to that element
       element.scrollIntoView();
     }
-  }, [hash]);  
+  }, [hash]);
+  if (!context) return;
+
+  const { getTotalCartAmount } = context;
 
   return (
-    <nav className={styles.navbar}> 
+    <nav className={styles.navbar}>
       {/* Website Logo */}
       <Logo />
       {/* Navbar Menu */}
       <ul className={styles.navMenu}>
         {/* Menu lists */}
-        {navbarMenu.map(menu => (
-          <li 
+        {navbarMenu.map((menu) => (
+          <li
             key={menu.label}
             className={menu.label === menuPath ? styles.active : ""}
           >
-            <Link 
-              to={menu.path} 
-              onClick={() => setMenuPath(menu.label)}
-            >
+            <Link to={menu.path} onClick={() => setMenuPath(menu.label)}>
               {menu.label}
             </Link>
           </li>
@@ -66,10 +74,12 @@ const Navbar = ({ setShowLogin, showLogin }: NavbarProps) => {
         {/* Basket icon */}
         <Link className={styles.basket} to={"/cart"}>
           <IoBasket size={32} />
-          <div className={styles.basketNoti}></div>
+          {getTotalCartAmount() !== 0 && (
+            <div className={styles.basketNoti}></div>
+          )}
         </Link>
         {/* Sign in */}
-        <button 
+        <button
           className={`${styles.signIn} ${showLogin && styles.active}`}
           onClick={() => setShowLogin(true)}
         >
@@ -77,7 +87,7 @@ const Navbar = ({ setShowLogin, showLogin }: NavbarProps) => {
         </button>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
