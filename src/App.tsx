@@ -1,12 +1,11 @@
 import { useState } from "react";
 
-import Home from "./pages/Home/Home";
-
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
 
 import styles from "./app.module.css";
+import { Outlet } from "react-router-dom";
 
 // Main App Component
 const App = () => {
@@ -23,8 +22,9 @@ const App = () => {
       <div className={styles.app}>
         {/* Navbar */}
         <Navbar setShowLogin={setShowLogin} showLogin={showLogin}/>
-        {/* Home page */}
-        <Home />
+        
+        {/* Children of react router */}
+        <Outlet />
       </div>
       
       {/* Footer section */}

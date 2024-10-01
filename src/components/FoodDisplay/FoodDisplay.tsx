@@ -14,9 +14,7 @@ const FoodDisplay = ({ category }: FoodDisplayProps) => {
   if (!context) return <div>Loading...</div>;
 
   const { foodLists } = context;
-
-  console.log(category);
-
+  
   return (
     <section className={styles.foodDisplay} id="foodDisplay">
       <h2>Top dishes near you</h2>

@@ -98,7 +98,8 @@
  .navRight {
   gap: 1.5rem;
 
-  & > button > svg {
+  & > button > svg, 
+  & > a > svg {
     width: 1.5rem;
   }
 

@@ -64,10 +64,10 @@ const Navbar = ({ setShowLogin, showLogin }: NavbarProps) => {
           <IoSearch size={32} />
         </button>
         {/* Basket icon */}
-        <button className={styles.basket}>
+        <Link className={styles.basket} to={"/cart"}>
           <IoBasket size={32} />
           <div className={styles.basketNoti}></div>
-        </button>
+        </Link>
         {/* Sign in */}
         <button 
           className={`${styles.signIn} ${showLogin && styles.active}`}

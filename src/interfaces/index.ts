@@ -33,4 +33,5 @@ export type FoodType =
     }>>,
     addToCart: (itemId: number) => void,
     removeFromCart: (itemId: number) => void,
+    getTotalCartAmount: () => number,
   };
